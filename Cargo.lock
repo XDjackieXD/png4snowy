@@ -1,6 +1,6 @@
 [root]
 name = "png4snowy"
-version = "1.1.0"
+version = "1.1.1"
 dependencies = [
  "getopts 0.2.14 (registry+https://github.com/rust-lang/crates.io-index)",
  "png 0.6.2 (registry+https://github.com/rust-lang/crates.io-index)",

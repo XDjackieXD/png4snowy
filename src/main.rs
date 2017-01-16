@@ -71,7 +71,6 @@ fn main() {
         ColorType::RGB => {
             for x in 0..width {
                 for y in 0..height {
-                    println!("x: {}, y: {}", x, y);
                     match outstream.write(&vec![((buf[((height-y-1)*width+x)*3] >> 2) & 0b00110000) | ((buf[((height-y-1)*width+x)*3+1] >> 4) & 0b00001100) | ((buf[((height-y-1)*width+x)*3+2] >> 6) & 0b00000011)]) {
                         Err(why) => panic!("Error writing to file \"{}\": {}", outpath.display(), Error::description(&why)),
                         Ok(size) => if size != 1 {
